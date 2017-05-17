@@ -23,6 +23,16 @@ namespace BasicFarmland
         public FarmInfo()
         {
             InitializeComponent();
+            initialData();
+        }
+        public FarmInfo(DataSet data)
+        {
+            InitializeComponent();
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+            dataGridView1.DataSource = data.Tables[0];
+
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -32,7 +42,7 @@ namespace BasicFarmland
 
         private void FarmInfo_Load(object sender, EventArgs e)
         {
-            initialData();
+            initialColumns();
             if (currentMap.LayerCount>0)
             {
                 currentFeatureLayer = currentMap.get_Layer(0) as IFeatureLayer;
@@ -47,7 +57,23 @@ namespace BasicFarmland
             dataset = Dao.query("select*from JBNT");
             dataGridView1.DataSource = dataset.Tables[0];
         }
-
+        private void initialColumns()
+        {
+            
+            dataGridView1.Columns[1].HeaderCell.Value = "基本农田编号";
+            dataGridView1.Columns[2].HeaderCell.Value = "图斑编号";
+            dataGridView1.Columns[3].HeaderCell.Value = "地类名称";
+            dataGridView1.Columns[4].HeaderCell.Value = "权属性质";
+            dataGridView1.Columns[5].HeaderCell.Value = "权属单位名称";
+            dataGridView1.Columns[6].HeaderCell.Value = "坐落单位名称";
+            dataGridView1.Columns[7].HeaderCell.Value = "基本农田类型";
+            dataGridView1.Columns[8].HeaderCell.Value = "质量等级代码";
+            dataGridView1.Columns[9].HeaderCell.Value = "坡度级别";
+            dataGridView1.Columns[10].HeaderCell.Value = "责任人编号";
+            dataGridView1.Columns[11].HeaderCell.Value = "责任人名称";
+            dataGridView1.Columns[12].HeaderCell.Value = "保护开始时间";
+            dataGridView1.Columns[13].HeaderCell.Value = "保护结束时间"; 
+        }
         public void setTBH(int tbh)
         {
             int line = -1;

@@ -709,5 +709,12 @@ namespace BasicFarmland
           //  fi.setTBH(3);
         }
 
+        private void 基本农田查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConditionFind cf = new ConditionFind();
+            cf.map = axMapControl1.Map;
+            cf.ShowDialog();
+        }
+
     }
 }
