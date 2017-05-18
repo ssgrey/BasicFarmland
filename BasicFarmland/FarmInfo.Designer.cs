@@ -255,6 +255,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(431, 167);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(163, 21);
@@ -262,6 +263,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(431, 207);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(163, 21);
@@ -476,7 +478,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FarmInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FarmInfo";
+            this.Text = "基本农田信息管理";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FarmInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

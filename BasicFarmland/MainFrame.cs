@@ -19,6 +19,7 @@ namespace BasicFarmland
 {
     public partial class MainFrame : Form
     {
+        public Form par = null;
         public MainFrame()
         {
             InitializeComponent();
@@ -676,7 +677,8 @@ namespace BasicFarmland
 
         private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormQueryByAttribute fq = new FormQueryByAttribute();
+            fq.Show();
         }
 
         private void 基本农田信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -714,6 +716,11 @@ namespace BasicFarmland
             ConditionFind cf = new ConditionFind();
             cf.map = axMapControl1.Map;
             cf.ShowDialog();
+        }
+
+        private void MainFrame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            par.Close();
         }
 
     }

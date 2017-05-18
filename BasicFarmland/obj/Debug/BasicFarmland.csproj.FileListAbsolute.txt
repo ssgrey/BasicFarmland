@@ -17,3 +17,4 @@ d:\Documents\Visual Studio 2012\Projects\BasicFarmland\BasicFarmland\obj\Debug\B
 d:\Documents\Visual Studio 2012\Projects\BasicFarmland\BasicFarmland\obj\Debug\BasicFarmland.PersonInfo.resources
 d:\documents\visual studio 2012\Projects\BasicFarmland\BasicFarmland\obj\Debug\BasicFarmland.ZRRAdd.resources
 d:\Documents\Visual Studio 2012\Projects\BasicFarmland\BasicFarmland\obj\Debug\BasicFarmland.ConditionFind.resources
+d:\Documents\Visual Studio 2012\Projects\BasicFarmland\BasicFarmland\obj\Debug\BasicFarmland.LoginForm.resources

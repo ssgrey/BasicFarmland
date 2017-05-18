@@ -17,7 +17,7 @@ namespace BasicFarmland
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ESRI.ArcGIS.RuntimeManager.Bind(ESRI.ArcGIS.ProductCode.EngineOrDesktop);
-            Application.Run(new MainFrame());
+            Application.Run(new LoginForm());
         }
     }
 }

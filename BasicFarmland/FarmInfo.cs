@@ -109,13 +109,11 @@ namespace BasicFarmland
             button4.Enabled = true;
             button9.Enabled = true;
             DataSet dataset = null;
-            dataset = Dao.query("select max(JBNTBH) from JBNT");
+            dataset = Dao.query("select max(JBNTBH) from JBNT");//查询基本农田表的信息
             string rs = dataset.Tables[0].Rows[0][0] as string;
-           // Console.WriteLine(rs);
             int a = Convert.ToInt32(rs);
             int c = a + 1;
             textBox1.Text = c.ToString();
-
         }
 
         private void clearContent()
